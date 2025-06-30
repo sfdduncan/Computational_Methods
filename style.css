@@ -1,18 +1,28 @@
 /* This part styles the page */
 
+
+
+
 body {
     font-family: 'Helvetica', sans-serif; 
     background-color: #080014; 
     color: #ffffff; 
     margin: 0;
+    text-align: center; 
 }
 
 /* This styles the button */ 
 
 button { 
-
     background-color: #faf9f6; 
-    stroke: "orange"; 
+    color: black; 
+    padding: 12px 24px; 
+    cursor: help; 
+    transition: background-color 0.3s;  
+    border-radius: 55px;
+}
 
-
+/* Hover effect for buttons */
+button:hover {                       /* Apply styles when user hovers over button */
+  background-color: #e68423;             /* Change background to lighter gray on hover */
 }
