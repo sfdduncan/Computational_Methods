@@ -10,10 +10,17 @@ button.addEventListener('click', function() {
     const currentTime = new Date().toLocaleDateString(); 
     const message = 'Hello! You click the button at ' + currentTime; 
 
-    // Display message in our HTML 
-    messageArea.textContent = message; 
+    // Display message in our HTML and ensure it's white
+    messageArea.textContent = message;
+    messageArea.style.color = '#fff';
 
     // Change button text temporarily 
     button.textContent = 'Thanks for clicking! Wow what a wonderful life we live!'; 
+
+    setTimeout(function() {                                // Run a function after a delay
+            button.textContent = 'Click Me!';
+            messageArea.textContent = ' ' ;                 // Change button text back to original
+        }, 2000);                                              // Wait 2000 milliseconds (2 seconds)
+
     }); 
 }); 

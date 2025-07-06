@@ -1,28 +1,81 @@
-/* This part styles the page */
-
-
-
-
-body {
-    font-family: 'Helvetica', sans-serif; 
-    background-color: #080014; 
-    color: #ffffff; 
-    margin: 0;
-    text-align: center; 
+/* Make messageArea text white for visibility on dark backgrounds */
+#messageDisplay {
+    color: #fff !important;
+    font-size: 1.1rem;
+    margin-top: 12px;
+    text-shadow: 0 1px 8px #000;
+    position: relative;
+    z-index: 2;
 }
 
-/* This styles the button */ 
+
+/* --- Twilight Forest Aesthetic --- */
+body {
+    font-family: 'Georgia', serif;
+    min-height: 100vh;
+    background: url('twlight_forest.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f7f7f7;
+    margin: 0;
+    text-align: center;
+
+    /* Add a dark overlay for twilight effect */
+    position: relative;
+}
+
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10, 30, 25, 0.65);
+    z-index: 0;
+    pointer-events: none;
+}
+
+main, header, .twilight-content, .cowboy-header {
+    position: relative;
+    z-index: 1;
+}
+
+header, .cowboy-header {
+    padding: 32px 0 12px 0;
+    background: none;
+}
+
+h1, .cowboy-header h1 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 2.7rem;
+    color: #e0f7fa;
+    letter-spacing: 1px;
+    margin-bottom: 0.5em;
+    text-shadow: 0 2px 12px #0a1e19, 0 0px 2px #ffffff;
+}
+
+.twilight-intro {
+    font-size: 1.2rem;
+    color: #b2dfdb;
+    margin-bottom: 1.5em;
+    text-shadow: 0 1px 8px #ffffff;
+}
 
 button { 
-    background-color: #faf9f6; 
-    color: black; 
-    padding: 12px 24px; 
-    cursor: help; 
-    transition: background-color 0.3s;  
-    border-radius: 55px;
+    background-color: rgba(30, 50, 40, 0.85);
+    color: #e0f7fa;
+    padding: 14px 32px;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    border: 2px solid #b2dfdb;
+    border-radius: 30px;
+    box-shadow: 0 2px 12px #0a1e19;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    z-index: 2;
+    position: relative;
 }
-
-/* Hover effect for buttons */
-button:hover {                       /* Apply styles when user hovers over button */
-  background-color: #e68423;             /* Change background to lighter gray on hover */
+button:hover {
+    background-color: #b2dfdb;
+    color: #1a2a23;
+    box-shadow: 0 4px 24px #0a1e19;
 }
+/* --- End Twilight Forest Aesthetic --- */
