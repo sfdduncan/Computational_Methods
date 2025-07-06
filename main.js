@@ -24,3 +24,13 @@ button.addEventListener('click', function() {
 
     }); 
 }); 
+
+// Add 200 sparkles at random positions
+for (let i = 0; i < 200; i++) {
+  const sparkle = document.createElement('div');
+  sparkle.className = 'sparkle';
+  sparkle.style.top = Math.random() * 100 + 'vh';
+  sparkle.style.left = Math.random() * 100 + 'vw';
+  sparkle.style.animationDelay = (Math.random() * 1.5) + 's';
+  document.body.appendChild(sparkle);
+}
