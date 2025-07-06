@@ -88,7 +88,7 @@ button {
     box-shadow: 0 2px 12px #0a1e19;
     cursor: pointer;
     transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-    z-index: 2;
+    z-index: 1000;
     position: relative;
 }
 button:hover {
