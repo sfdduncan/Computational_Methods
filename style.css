@@ -31,13 +31,10 @@
 body {
     font-family: 'Georgia', serif;
     min-height: 100vh;
-    background: url('twlight_forest.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: #18191a;
     color: #f7f7f7;
     margin: 0;
     text-align: center;
-
-    /* Add a dark overlay for twilight effect */
     position: relative;
 }
 
